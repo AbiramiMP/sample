@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> My javascript examples</title>
+    </head>
+    <script>
+    class person{
+        constructor(name,year){
+            this.name=name;
+            this.year=year;
+        }
+        age(year){
+            return year- this.year;
+        }
+    }
+    
+    </script>
+    <body>
+        <p id ="person"></p>
+        <script>
+            let date= new Date();
+            let year= date.getFullYear();
+            let p= new person("Abirami",2000);
+            document.getElementById("person").innerHTML= "I'm "  +  p.age(year) +  " years old";
+        </script>
+    </body>
+    </html>

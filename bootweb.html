@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+            <title>My BootStrap Example</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+<link rel="Stylesheet" type="text/css" href="css/bootweb.css"/>
+    <style>
+
+         #home {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/pink.jpg');
+}
+#orders {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/pink.jpg');
+}
+#electronics{
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/pink.jpg');
+}
+#deals{
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/pink.jpg');
+}
+#help{
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/pink.jpg');
+}
+div.a {
+  font-size: 15px;
+}
+div.c{
+    font-size: large;
+}
+h4{
+    padding: initial;
+    margin: 10px;
+    font-size: x-large;
+    font-weight: 600;
+}
+p{
+    font-size: large;
+    font-style: oblique;
+    color: crimson;
+}
+
+    </style>
+    <body>
+        
+        <div class="container">
+            <div class="a">
+            <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+                <img src="images/AM.jpg"  height="30" width="80">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+               
+                
+                    </li>
+                        <dl class="nav-item active">
+                            <a class="nav-link" href="#home"><strong>   Home</strong> <span class="sr-only">(current)</span></a>
+                        </dl>
+                        <dl class="nav-item">
+                            <a class="nav-link" href="#orders"><strong>Your orders</strong></a>
+                        </dl>
+                        
+                        <dl class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <strong>Category</strong>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#electronics">Electronics</a>
+                                <a class="dropdown-item" href="#">Mobiles</a>
+                                <a class="dropdown-item" href="#">Laptops</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Furniture</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Toys and Games</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Men and Womens Fashion</a>
+                            </div>
+                        </dl>
+
+                        <dl class="nav-item">
+                            <a class="nav-link" href="#deals"><strong>Today Deals</strong></a>
+                        </dl>
+                        <dl class="nav-item">
+                            <a class="nav-link disabled" href="#help">Help</a>
+                        </dl>
+                        
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                    <button type="button"class="btn btn-primary"data-toggle="modal" data-target="#loginModalCenter">Login</button>
+                                    <div class="modal fade"id="loginModalCenter"tableindex="-1"role="dialog"aria-labelledby="loginModalCenterTitle">
+                                    <div class="modal-dialog modal-dialog-centered"role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title"id="exampleModalLongTitle"></h5>
+                                            <div class="modal-body">
+                                                <div class="form-body">
+                                                       
+                                                        <label for="email" class="label-title">Email*</label>
+                                                        <input type="email" id="email" class="form-input" placeholder="Enter your email"  required="required" >
+                                                        
+                                                      <div class="horizontal-group">
+                                                        <br>
+                                                        <div class="form-group left">
+                                                          <label for="password" class="label-title">Password *</label>
+                                                          <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+    
+                                                          <div class="footer">
+                                                            <button type="submit"  class="btn">Login</button>
+                                                        </div>
+                                                        <div class="modal-header">
+                                                            <button type="button"class="btn" data-dismiss="modal">x</button>
+                                                        
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                        
+                        </li>
+                    
+                        <li class="nav-item active">
+                            <form class="form-inline my-2 my-lg-0">
+                            <button type="button"class="btn btn-warning"data-toggle="modal" data-target="#registerModalCenter">Register</button>
+                            <div class="modal fade"id="registerModalCenter"tableindex="-1"role="dialog"aria-labelledby="registerModalCenterTitle">
+                            <div class="modal-dialog modal-dialog-centered"role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"id="exampleModalLongTitle"></h5>
+                                    <div class="modal-body">
+                           
+                                          <form class="signup-form" action="" method="">
+                                              <div class="form-header">
+                                                <h1><center>Registration Form</center> </h1>
+                                              </div>
+                                              <div class="form-body">
+                                                <div class="horizontal-group">
+                                                  <div class="input-group">
+                                                  <div class="form-group left">
+                                                    <label for="firstname" class="label-title">First name *</label>
+                                                    <input type="text" id="firstname" class="form-input" placeholder="Enter your first name" required="required" />
+                                                  </div>
+                                                  <div class="form-group right">
+                                                    <label for="lastname" class="label-title">Last name</label>
+                                                    <input type="text" id="lastname" class="form-input" placeholder="Enter your last name" />
+                                                  </div>
+                                                  </div>
+                                                  </div>
+                                                
+                                                <div class="form-group">
+                                                  <label for="email" class="label-title">Email*</label>
+                                                  <input type="email" id="email" class="form-input" placeholder="Enter your email"  required="required" >
+                                                  <div class="form-group left">
+                                                    <label for="Phone Number" class="label-title">Phone Number *</label>
+                                                    <input type="t" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+                                                  </div>
+                                                  
+                                                <div class="horizontal-group">
+                                                  <br>
+                                                  <div class="form-group left">
+                                                    <label for="password" class="label-title">Password *</label>
+                                                    <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+                                                  </div>
+                                                  
+                                                  <div class="horizontal-group">
+                                                    <div class="form-group right">
+                                                      <label for="password" class="label-title">Confirm Password *</label>
+                                                      <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+                                                    </div>
+                                               </div>
+                                               
+                                               <div class="horizontal-group">
+                                                    <div class="form-group left">
+                                                        <br>
+                                                      
+                                                <button type="submit"  class="btn">Register</button>
+                                            </div>
+                                            </div>
+                                      
+                                        <div class="modal-header">
+                                            <button type="button"class="btn btn-secondary"data-dismiss="modal">x</button>
+                                            </div>  
+                                            </div>
+                                            </div>
+                                            </form> 
+                                            </div>
+                                        </ul>   
+
+                   
+
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button type="button"class="btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter">Wishlist </button>
+                            <div class="modal fade"id="exampleModalCenter"tableindex="-1"role="dialog"aria-labelledby="exampleModalCenterTitle">
+                            <div class="modal-dialog modal-dialog-centered"role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"id="exampleModalLongTitle"></h5>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Category</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="success">
+                                    <td>Electronics</td>
+                                    <td>Iphone11</td>
+                                    <td>39999</td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>Womens fashion</td>
+                                    <td>Sweatshirt</td>
+                                    <td>299</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>Electronics</td>
+                                    <td>boAt Bassheads </td>
+                                    <td>199</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Toys and Games </td>
+                                    <td>Mirror Cube</td>
+                                    <td>249</td>
+                                </tr>
+                            </tbody>
+                        
+                        </table>
+                        </div>
+                        
+                        
+                     
+                        </form>
+                                    <button type="button"class="close"data-dismiss="modal"aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                    </div>
+                    </nav>
+                    </div>
+                    </div>
+                    
+     <br>
+   
+     
+     
+        <section class="home" id="home">
+            <div class="a">
+            <br>
+                         <center> <h2>Welcome </h2> </center>
+                          <center><img src="images/shopping.jpg" width="400" height="200"></center>
+                  </div>      
+                </section>
+
+                <section class="orders" id="orders">
+                    <div class="container">
+                        <div class="a">
+                   <center> <h4> Your orders</h4></center>
+                   <h4>Last 3 months</h4>
+                   <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr >
+            <td>Electronics</td>
+            <td>Tripods</td>
+            <td>1299</td>
+        </tr>
+        <tr>
+            <td>Womens fashion</td>
+            <td>Grand Chudithar</td>
+            <td>299</td>
+        </tr>
+        <tr>
+            <td>Mens Fashion</td>
+            <td>Formal Shirts</td>
+            <td>799</td>
+        </tr>
+        <tr>
+            <td>Toys-Games </td>
+            <td>Barbie doll</td>
+            <td>249</td>
+        </tr>
+    </tbody>
+
+</table>
+                   
+                    <div class="panel-group" id="accordtion">
+                        <div class="panel panel-info">
+                            <div class="heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="accordtion" href="#collapsexample">Last 6 months</a>
+                                    </h4>
+                                
+                            </div>
+                            <div id="collapsexample" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Category</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="success">
+                                    <td>Electronics</td>
+                                    <td>Iphone11</td>
+                                    <td>39999</td>
+                                </tr>
+                                <tr class="warning">
+                                    <td>Womens fashion</td>
+                                    <td>Sweatshirt</td>
+                                    <td>299</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>Electronics</td>
+                                    <td>boAt Bassheads </td>
+                                    <td>199</td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Toys and Games </td>
+                                    <td>Mirror Cube</td>
+                                    <td>249</td>
+                                </tr>
+                            </tbody>
+                        
+                        </table>
+                        </div>
+                    
+                    </section>
+
+                    <section class="electronics" id="electronics">
+                        <div class="a">
+                    <center> <h4>Category</h4></center>
+                    
+                    <label for="name"><strong>Electronics</strong></label>
+                    <br>
+                <center>
+             <select>
+                 <option>Mobiles</option>
+                 <option>Laptops</option>
+                <option>Headphones</option>
+                 <option>Chargers</option>
+                 <option>Tripods</option>
+             </select>
+            </center>
+             <br>
+             <div class="c">
+             <label for="name"><strong>Filters</strong></label>
+             <center>
+             <select multiple class="form-control">
+   
+                        <option>Oneplus</option>
+                        <option>Samsung</option>
+                        <option>Redmi</option>
+                        <option>Oppo</option>
+                        <option>Vivo</option>
+                    </select>   
+                 </center>
+                 </div>
+</select>
+</div>
+</div>
+
+</section>
+<section class="deals" id="deals">
+    <div class="a">
+    <center> <h4>Today Deals</h4></center>
+
+      
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <p> Gadgets</p>
+                        <img class="card-img" src="images/cam.jpg" alt="dog",height="100">
+                        <div class="card-img-overlay overlay-grey text-white d-flex justify-content-start align-items-end">
+                        </div>
+                    </div>
+                </div>
+            <div class="col-3">
+                <div class="card">
+                    <p>Furnitures</p>
+                    <img class="card-img" src="images/furnitures.jpg" alt="dog",height="100">
+                    <div class="card-img-overlay overlay-green text-red d-flex justify-content-start align-items-end">
+     
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <p>Toys-Games</p>
+                    <img class="card-img" src="images/toys.jpg" alt="dog",height="100">
+                    <div class="card-img-overlay overlay-grey text-blue  d-flex justify-content-start align-items-end">
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <p>Fashions</p>
+                                <img class="card-img" src="images/cloth.jpg" alt="dog",height="100">
+                                <div class="card-img-overlay overlay-grey text-blue  d-flex justify-content-start align-items-end">
+                                </div>
+                </div>
+            </div>
+</div>
+            </section>
+          
+
+        </div>
+        <section class="help" id="help">
+            <div class="a">
+            <h2>Contact us on </h2>
+                  
+                      <a href="https://facebook.com/">Facebook</a>
+                         <a href="https://linkedin.com/">Linkedin</a>
+                          <a href="https://twitter.com/">Twitter</a>
+                      
+                      <p> Mail: <a href="shop@gmail.com">shop@gmail.com</a></p>
+
+           
+        </div>
+        </div>
+</section>
+<footer align="center">
+  <h6>Copyrights@2021</h6>
+</footer>
+
+    </form>
+
+                    
+    </body>
+    </html>

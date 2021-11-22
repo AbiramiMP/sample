@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Registration Form</title>
+       
+        <script type="text/javascript" src="jquery/reg.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script>
+        $(function(){
+            $('#collapseexample').on('show.bs.collapse',function(){
+                
+            })
+        })
+    </script>
+  <script>
+    $(function() {  
+    $( "#draggable" ).draggable();  
+  }); 
+$(function() {
+    $("#firstname").blur(function(){
+    let value=$("#firstname").val();
+    if(value ===''){ $("#firstname").text("* The field is required").css("color","red").css("font-weight","bold");}
+    else{
+        //$("#sname").val(value);
+        $("#firstname").text("");
+    }
+})
+});
+$(function() {
+    $("#password").blur(function(){
+    let value=$("#password").val();
+    if(value ===''){ $("#pwd").text("* The field is required").css("color","red").css("font-weight","bold");}
+    else{
+        //$("#sname").val(value);
+        $("#pwd").text("");
+    }
+})
+}); 
+$(function() {
+    $("#blood").blur(function(){
+    let value=$("#blood").val();
+    if(value ===''){ $("#bg").text("* The field is required").css("color","red").css("font-weight","bold");}
+    else{
+        //$("#sname").val(value);
+        $("#bg").text("");
+    }
+})
+});
+$(function() {
+    $("#email").blur(function(){
+    let value=$("#email").val();
+    if(value ===''){ $("#mail").text("* The field is required").css("color","red").css("font-weight","bold");}
+    else{
+        //$("#sname").val(value);
+        $("#mail").text("");
+    }
+})
+});
+
+
+    $(document).ready(function(){
+        $('input').focus(function(){
+            $(this).css('border','3px solid #23c0f5');
+        })
+      });
+    
+      $(document).ready(function(){
+        $('input').blur(function(){
+            $(this).css('border','none');
+        })
+      });
+
+      $(document).ready(function () {
+        $("#dob").blur(function () {
+            var value = $("#dob").val();
+            console.log(value);
+            dob = new Date(value);
+            console.log(dob);
+      
+            if (value === '') {
+                $("#dob").focus();
+            }
+            else {
+                var today = new Date();
+                console.log(today);
+                var age = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000));
+                //console.log(age);
+                $("#age").val(age);
+            }
+        })
+      });
+      $(document).ready(function () {
+        $("#email").blur(function(){
+            var evalue = $("#email").val();
+            console.log(evalue);
+            var regex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            
+            if(!regex.test(evalue)){
+                $("#email").css('border','3px solid red');
+        
+            }
+            else{
+                $("#email").css('border','1px solid blue');
+            }
+        })
+        });
+        function addressSame(){
+            if(document.getElementById("same").checked){
+                document.getElementById("secondaryaddress").value=
+                document.getElementById("primaryaddress").value;
+                document.getElementById("secondaryzip").value=
+                document.getElementById("primaryzip").value;
+        
+            }else{
+                document.getElementById("secondaryaddress").value="";
+                document.getElementById("secondaryzip").value="";
+            }
+        }
+        
+  </script>
+     
+    </head>
+    <style>
+        
+        body {
+            background-image:  url('D:/web examples/images/pink.jpg');
+          }
+          .signup-form {
+            font-family: "Roboto", sans-serif;
+            width:650px;
+            margin:30px auto;
+            background:linear-gradient(to right, #acaaaa 0%, #afafaf 50%, #aaa9a9 99%);
+            border-radius: 20px;
+          }
+          .form-header  {
+            background-color: grey;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+          }
+          .form-header h1 {
+            font-size: 30px;
+            text-align:center;
+            color:rgb(15, 15, 15);
+            padding:20px 0;
+            border-bottom:1px solid #0d0e0d;
+          }
+          .form-body {
+            padding:10px 40px;
+            color:#666;
+          }
+          .form-group{
+            margin-bottom:20px;
+          }
+          .form-body .label-title {
+            color:black;
+            font-size: 17px;
+            font-weight: bold;
+          }
+          .form-body .form-input {
+              font-size: 17px;
+              box-sizing: border-box;
+              width: 100%;
+              height: 34px;
+              padding-left: 10px;
+              padding-right: 10px;
+              color: #333333;
+              text-align: left;
+              border: 1px solid black;
+              border-radius: 4px;
+              background: rgb(247, 114, 114);
+              outline: none;
+          }
+          .horizontal-group .left{
+            float:left;
+            width:49%;
+          }
+          .horizontal-group .right{
+            float:right;
+            width:49%;
+          }
+          input[type="file"] {
+            outline:black;
+            cursor:pointer;
+            font-size: 17px;
+          }
+          #range-label {
+            width:15%;
+            padding:5px;
+            background-color: #595e5c;
+            color:rgb(24, 23, 23);
+            border-radius: 5px;
+            font-size: 17px;
+            position: relative;
+            top:-8px;
+          }
+          ::-webkit-input-placeholder  {
+            color:#353434;
+          }
+          .signup-form .form-footer  {
+            background-color: #505152;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding:10px 40px;
+            text-align: right;
+            border-top: 1px solid #cccccc;
+            clear:both;
+          }
+          .form-footer span {
+            float:left;
+            margin-top: 10px;
+            color:#aaa9a9;  
+            font-style: italic;
+            font-weight: thin;
+          }
+          .btn {
+             display:inline-block;
+             padding:10px 20px;
+             background-color:whitesmoke;
+             font-size:17px;
+             border:black;
+             border-radius:5px;
+             color:#565757;
+             cursor:pointer;
+          }
+          .btn:hover {
+            background-color: #0c0c0c;
+            color:white;
+          }
+          input[type=text]:focus, input[type=password]:focus {  
+            background-color: rgb(52, 52, 54);  
+            outline: none;  
+          } 
+          input[type=text]:focus, input[type=password]:focus,input[type=email]:focus {  
+            background-color: rgb(103, 146, 238);  
+            outline: none;  
+          }
+          input[type=email]:invalid{
+  background-color: rgba(255, 0, 0, 0.377);  
+          } 
+input[type=email]:valid{
+  background-color: rgb(247, 114, 114);  
+}
+input[type=t]:invalid{
+  background-color: rgba(255, 0, 0, 0.377);  ;  
+}
+input[type=t]:valid{
+  background-color: rgb(247, 114, 114);  
+}
+         
+
+        </style>
+
+
+
+        
+        <div id="draggable" >  
+        <form class="signup-form" action="" method="">
+         
+          <div class="form-header">
+            <h1><center>Registration Form</center> </h1>
+        
+          <!---<form class="form-inline my-2 my-lg-0"></form>
+            <button type="button"class="btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter">Any queries</button>
+            <div class="modal fade"id="exampleModalCenter"tableindex="-1"role="dialog"aria-labelledby="exampleModalCenterTitle">
+            <div class="modal-dialog modal-dialog-centered"role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button"class="close"data-dismiss="modal"aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <caption>My Table example</caption>
+                        <thead>
+                            <tr>
+                                <th>Emp name</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr class="success">
+                <td>Abirami</td>
+                <td>ISIT</td>
+            </tr>
+            <tr class="warning">
+                <td>Aishwarya</td>
+                <td>FE developer</td>
+            </tr>
+            <tr class="danger">
+                <td>Janani</td>
+                <td>Supporting</td>
+            </tr>
+            <tr class="active">
+                <td>Astalakshmi</td>
+                <td>Testing</td>
+            </tr>
+        </tbody>
+                            </tr>
+                        
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"class="btn btn-secondary"data-dismiss="modal">Close</button>
+                    <button type="button"class="btn bt-primary">Save changes</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</nav>-->
+
+          <div class="form-body">
+            <div class="horizontal-group">
+              <div class="input-group">
+              <div class="form-group left">
+                <label for="firstname" class="label-title">First name *</label>
+                <input type="text" id="firstname" class="form-input" placeholder="Enter your first name" required="required" />
+                <label id="firstname"></label>
+              </div>
+              <div class="form-group right">
+                <label for="lastname" class="label-title">Last name *</label>
+                <input type="text" id="lastname" class="form-input" placeholder="Enter your last name" />
+              </div>
+              </div>
+              </div>
+            
+            <div class="form-group">
+              <label for="email" class="label-title">Email*</label>
+              <input type="email" id="email" class="form-input" placeholder="Enter your email"  required="required" >
+              
+            <div class="horizontal-group">
+              <br>
+              <div class="form-group left">
+                <label for="password" class="label-title">Password *</label>
+                <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+              </div>
+              
+              <div class="horizontal-group">
+                <div class="form-group right">
+                  <label for="password" class="label-title">Confirm Password *</label>
+                  <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+                </div>
+              
+              <div class="form-group right">
+                <label for="Phone Number" class="label-title">Alternate Phone Number *</label>
+                <input type="t" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+              </div>
+            </div>
+            <div class="form-group left">
+              <label for="Phone Number" class="label-title">Phone Number *</label>
+              <input type="t" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+            </div>
+          
+            
+            <div class="horizontal-group">
+              
+                <label class="label-title">Gender:</label>
+                
+                  <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+                  <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+                  <label for="others"><input type="radio" name="gender" value="others" id="others"> Others</label>
+                </div>
+                
+              <br>
+              <div class="horizontal-group ">
+                <div class="form-group left">
+                <label for="experience" class="label-title">DOB</label>
+                <input type="date"  value="date"class="form-input">
+              </div>
+              <div class="form-group right">
+                <label  class="label-title">Age</label>
+                <input type="number" min="18" max="30"  value="18" class="form-input">
+              </div>
+            </div>
+            <div class="horizontal-group">
+              
+              <label class="label-title">Education Level</label>
+              <select class="form-input" id="level" >
+                <option value="ug">UG</option>
+                <option value="pg">PG</option>
+                <option value="others">Other</option>
+              </select>
+            </div>
+           
+              <br>
+              <div class="horizontal-group">
+              <div class="form-group left" >
+                <label for="choose-file" class="label-title">Upload Photo</label>
+                <input type="file" id="choose-file" size="80">
+              </div>
+                <div class="form-group right" >
+                  <label for="choose-file" class="label-title">Upload marksheets</label>
+                  <input type="file" id="choose-file" multiple size="80">
+                </div>
+                <div class="form-group ">
+                  
+                  <label class="label-title">Languages Known</label>
+                </div>
+                <select multiple class="form-control">
+                    <option>Tamil</option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Telugu</option>
+                    <option>Malayalam</option>
+
+                </select>
+                </div>
+                </div>
+             <br>
+                <div class="form-group ">
+                  <label class="label-title">Programming Languages</label>
+                  <div >
+                   
+                    <label><input type="checkbox" value="C">C</label>
+                    <label><input type="checkbox" value="Java">Java</label>
+                    <label><input type="checkbox" value="HTML">HTML</label>
+                    <label><input type="checkbox" value="Python">Python</label>
+                  
+                  </div>
+                </div>
+              </div>
+             
+       <!----   <div class="form-group">
+              <label for="name" class="label-title">Name of the College*</label>
+              <input type="name" id="name" class="form-input" placeholder="Enter your college name" required="required">
+            </div>
+<div class="horizontal-group">
+            <div class="form-group right">
+              <label for="Phone Number" class="label-title">Year of passing*</label>
+              <input type="tel" id="Phone Number" name="Phone Number" class="form-input" palceholder="yop" pattern="[1-2]{1}[0-9]{3}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+            </div>
+          </div>
+          <div class="form-group left">
+            <label for="Phone Number" class="label-title">Percentage*</label>
+            <input type="tel" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[0-9]+([\.][0-9]{0,2})?" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+          </div> -->
+            
+             
+          <div class="form-group">
+            <label for="firstname" class="label-title">Address*</label><br>
+         <br> 
+         <div class="horizontal-group">
+          <div class="form-group left">
+        <label  class="label-title" for="primary address">Current Address:</label>
+        <input type="text" class="form-input"  name="Address" id="primaryaddress" required /> <br>
+        </div>
+        <div class="form-group right">
+        <label  class="label-title" for="primary zip">Zip code:</label>
+        <input type="text" class="form-input"  name="Zip code" id="primaryzip" pattern="[0-9]{6}" required /> <br />
+    </div>
+    </div>
+        <br>
+        <input type="checkbox" name="same" id="same" onchange="addressSame()" /> 
+        
+        <label for="same">Check this box permanent address same as current address.</label>
+        
+        
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <br>
+        <label  class="label-title" for="secondary address">Permanent Address:</label>
+        <input type="text" class="form-input"  name="Address" id="secondaryaddress" required /> <br>
+        </div>
+        <div class="form-group right">
+          <br>
+        <label  class="label-title" for="secondary zip">Zip code:</label>
+        <input type="text" class="form-input"  name="Zip code" id="secondaryzip" pattern="[0-9]{6}" required /> <br />
+    </div>
+    </div>
+        
+       <!<div class="horizontal-group">
+          <div class="form-group left">
+      
+            
+      <br>
+         
+            
+
+            <div class="form-group ">
+              <label for="choose-file" class="label-title">Bio</label>
+              <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+            </div>
+          </div>
+          <div class="form-footer">
+            <span>Fields marked * are mandatory</span>
+            <button type="submit" class="btn">Register</button>
+            
+            </div>
+            </div>
+            </form>
+            </div>
+          
+</html>

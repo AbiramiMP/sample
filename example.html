@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> JQUERY examples</title>
+        <script type="text/javascript" src="js/jquery/jquery.js"></script>
+        </head>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $('h1').css("background","pink");
+                    $('p:first').css("background", "lightblue");
+                    $("p:last").hide ();
+                  
+            
+                });
+            });
+        </script>
+        <body>
+            <h1 >This is my simple jquery selector example</h1>
+            <p >Hii I'm Abirami</p>
+            <p>I am from Dindigul</p>
+            <button>Click me</button>
+          
+        </body>
+        </html>

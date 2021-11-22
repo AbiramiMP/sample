@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My javascript examples</title>
+    </head>
+    <script type="text/javascript">
+    function displayDate(){
+        var d=new Date();
+        document.getElementById('a').innerHTML=d;
+    }
+    </script>
+    <body>
+        <a href="#" id="a">Show Me</a>
+        Enter name:<input type="text" onkeypress="displayDate()">
+        <!--<script>
+        displayDate();
+        document.write("Today Date is:<input type=text value=" +displayDate()+" readonly/>" );
+    </script> --->
+
+    </body>
+</html>

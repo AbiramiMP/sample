@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> DOM examples</title>
+        </head>
+        <body>
+            <section>
+                <img src="images/dog.jpg" alt="dog" width="200" height="300">
+                <p> Here we will add a link to the <a href ="https://www.google.com/"> Google Loading Page</a></p>
+
+            </section>
+            <script type="text/javascript" src="js/domex.js">
+                const img = document.querySelector('img');
+                console.log(img.TEXT_NODE)
+                img.height=10
+                const p=document.querySelector('p');
+                p.textContent="Hello"
+            </script>
+        </body>
+        </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My javascript examples</title>
+    </head>
+    <script>
+        function loadData(){
+            var name=document.getElementById('name').value 
+            const person={
+                firstName:name,
+                age:document.getElementById('age').value ,
+                mobilenumber:document.getElementById('mobile').value ,
+                fullName: function(){
+                    return "Ms:" +this.firstName;
+                }
+            };
+            document.getElementById("data").innerHTML=person.firstName.toUpperCase() + " is " + person.age + "years old.";
+              person.fullName() + " is " + person.age + " years old.";
+        }
+        function clearData(){
+            document.getElementById("data").innerHTML="";
+        }
+    </script>
+    <body>
+        <input type="hidden" id="name" value="Abirami";>
+        <input type="hidden" id="age" value="21";>
+        <input type="hidden" id="mobile" value="987654321";>
+        <div onclick="loadData()">ShowMe</div>
+        <p id ="data"></p>
+        <div onclick="clearData()">ClearMe</div>
+    </body>
+    </html>

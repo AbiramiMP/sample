@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>My Canvas</head>
+    <script type="text/javascript">
+    function makeFun(){
+        var canvas=document.getElementById('a_simple_box');
+        var context=canvas.getContext('2d');
+        context.strokeStyle='#000000';
+        context.fillstyle='#fe23';
+        context.fillReact(10,20,200,100);
+        context.strokeReact(10,20,300,200);
+    }
+    </script>
+    <body onload="makeFun()">
+        <fieldset>
+            <legend>Personal</legend>
+            Name:<input type="text">
+            Degree:<input type="checkbox" name="ck" >MCA
+            <input type="checkbox" name="ck" >BE
+            <input type="checkbox" name="ck" > BSc
+        </fieldset>
+        <fieldset>
+            <legend>Official</legend>
+            Department Name:<input type="text">
+            Position:<input type="checkbox" name="ck" >SE
+            <input type="checkbox" name="ck" >TL
+            <input type="checkbox" name="ck" > HR
+        </fieldset>
+    <input type="Submit">
+    <canvas ID="a_simple_box" width="640" height="480">....Text...</canvas>
+
+
+    </body>
+
+</html>

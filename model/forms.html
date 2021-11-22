@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML CSS Application Form</title>
+    <link rel="stylesheet" href="css/signupstyle.css">
+  </head>
+  <body>
+      <style>
+        body {
+            background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://codetheweb.blog/assets/img/posts/steps-to-creating-a-website/beach.jpg');
+          }
+          .signup-form {
+            font-family: "Roboto", sans-serif;
+            width:650px;
+            margin:30px auto;
+            background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+            border-radius: 20px;
+          }
+          .form-header  {
+            background-color: #ebffbb;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+          }
+          .form-header h1 {
+            font-size: 30px;
+            text-align:center;
+            color:rgb(15, 15, 15);
+            padding:20px 0;
+            border-bottom:1px solid #eeffbb;
+          }
+          .form-body {
+            padding:10px 40px;
+            color:#666;
+          }
+          .form-group{
+            margin-bottom:20px;
+          }
+          .form-body .label-title {
+            color:#0082fc;
+            font-size: 17px;
+            font-weight: bold;
+          }
+          .form-body .form-input {
+              font-size: 17px;
+              box-sizing: border-box;
+              width: 100%;
+              height: 34px;
+              padding-left: 10px;
+              padding-right: 10px;
+              color: #333333;
+              text-align: left;
+              border: 1px solid #d6d6d6;
+              border-radius: 4px;
+              background: white;
+              outline: none;
+          }
+          .horizontal-group .left{
+            float:left;
+            width:49%;
+          }
+          .horizontal-group .right{
+            float:right;
+            width:49%;
+          }
+          input[type="file"] {
+            outline: #169c7b;
+            cursor:pointer;
+            font-size: 17px;
+          }
+          #range-label {
+            width:15%;
+            padding:5px;
+            background-color: #1BBA93;
+            color:white;
+            border-radius: 5px;
+            font-size: 17px;
+            position: relative;
+            top:-8px;
+          }
+          ::-webkit-input-placeholder  {
+            color:#d9d9d9;
+          }
+          .signup-form .form-footer  {
+            background-color: #EFF0F1;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding:10px 40px;
+            text-align: right;
+            border-top: 1px solid #cccccc;
+            clear:both;
+          }
+          .form-footer span {
+            float:left;
+            margin-top: 10px;
+            color:rgb(17, 17, 17);  
+            font-style: italic;
+            font-weight: thin;
+          }
+          .btn {
+             display:inline-block;
+             padding:10px 20px;
+             background-color: #aefce8;
+             font-size:17px;
+             border:none;
+             border-radius:5px;
+             color:#bcf5e7;
+             cursor:pointer;
+          }
+          .btn:hover {
+            background-color: #06644d;
+            color:white;
+          }
+          input[type=text]:focus, input[type=password]:focus {  
+            background-color: rgb(103, 146, 238);  
+            outline: none;  
+          } 
+          input[type=text]:focus, input[type=password]:focus,input[type=email]:focus {  
+            background-color: rgb(103, 146, 238);  
+            outline: none;  
+          }
+          input[type=email]:valid{
+            background-color: rgb(0, 255, 42);  
+          }
+          input[type=email]:invalid{
+            background-color: rgb(200, 196, 255);  
+          }
+          input[type=tel]:invalid{
+            background-color: rgb(199, 204, 253);  
+          }
+          input[type=tel]:valid{
+            background-color: rgb(0, 255, 42);  
+          }
+    </style>
+    <form class="signup-form" action="" method="">
+      <div class="form-header">
+        <h1><center>Create Account </center> </h1>
+      </div>
+      <div class="form-body">
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="label-title">Email*</label>
+          <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+        </div>
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="password" class="label-title">Password *</label>
+            <input type="password" id="password" min="8" max="12" class="form-input" placeholder="enter your password" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="Phone Number" class="label-title">Phone Number *</label>
+            <input type="tel" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+          </div>
+        </div>
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+              <label for="others"><input type="radio" name="gender" value="others" id="others"> Others</label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label for="experience" class="label-title">Age</label>
+            <input type="number" min="18" max="80"  value="18" class="form-input">
+          </div>
+        </div>
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label class="label-title">Education Level</label>
+            <select class="form-input" id="level" >
+              <option value="ug">UG</option>
+              <option value="pg">PG</option>
+              <option value="others">Other</option>
+            </select>
+          </div>
+          <div class="form-group right">
+            <label for="experience" class="label-title">Experience</label>
+            <input type="range" min="0" max="8" step="1" value="0" id="experience" class="form-input" onChange="change();" style="height:28px;width:78%;padding:0;">
+           
+          </div>
+        </div>
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label for="choose-file" class="label-title">Upload Profile</label>
+            <input type="file" id="choose-file" size="80">
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Languages known</label>
+            <div >
+              <label><input type="checkbox" value="C">C</label>
+              <label><input type="checkbox" value="Java">Java</label>
+              <label><input type="checkbox" value="HTML">HTML</label>
+              <label><input type="checkbox" value="Python">Python</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="choose-file" class="label-title">Bio</label>
+          <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+        </div>
+      </div>
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Create</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> My javascript examples</title>
+        <script type="text/javascript" src="address.js"></script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    <b>Residential Address</b>
+                </legend>
+          
+            <label for="primary address">Address:</label>
+            <input type="text" name="Address" id="primaryaddress" required /> <br />
+            <label for="primary zip">Zip code:</label>
+            <input type="text" name="Zip code" id="primaryzip" pattern="[0-9]{6}" required /> <br />
+        </fieldset>
+       
+            <input type="checkbox" name="same" id="same" onchange="addressSame()" /> 
+            <label for="same">Check this box shipping address same residential address.</label>
+            <fieldset>
+                <legend>
+                    <b>Shipping Address</b>
+                </legend>
+          
+            <label for="secondary address">Address:</label>
+            <input type="text" name="Address" id="secondaryaddress" required /> <br />
+            <label for="secondary zip">Zip code:</label>
+            <input type="text" name="Zip code" id="secondaryzip" pattern="[0-9]{6}" required /> <br />
+        </fieldset>
+        <input type="submit" value ="Submit" />
+       
+            
+        </form>
+    </body>
+    </html>

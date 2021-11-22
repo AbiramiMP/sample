@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My new page</title>
+    </head>
+    <body>
+        <header>
+            <center><img src="images/full stack.png"></center>
+            <nav>
+                <ul>
+                    <li> <a href="#login">Log in</a></li>
+                     <li><a href="#start"> Register</a></li>
+                     <li> <a href="#course">Course</a></li>
+                     <li> <a href="#contact"> Contact</a></li>
+        
+                
+                 </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="login">
+                <div class="section-inner">
+                    <img src="images/full-stack-development-main.jpg">
+                    <h1> Hi!!! I am gateway </h1>
+                </div>
+            </section>
+            <section id ="start">
+                <div class="section inner">
+                    <h2> Register here </h2>
+                    <form action="register.php" method="post">
+                        <ul>
+                            <li>Enter Firstname:<input type="text" name="fname" required </li>
+                            <li>Enter Lastname:<input type="text" name="lname" required </li>
+                            <li>Enter Password:<input type="password" name="upwd" required </li>
+                            <li>Enter Mobile:<input type="number" name="mobile" required </li>
+                            <li>Enter Mail id:<input type="email" name="mail" required </li>
+                            <br>
+                            <input type="submit" value="Submit"><input type="reset" value="Cancel">
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <section id ="course">
+                <div class="section inner">
+                    <h3> Course Apply </h3>
+                    <fieldset>
+                        <legend>Details</legend>
+                        Course:<input type="checkbox" name="ck" > Frontend
+                        <input type="checkbox" name="ck" >Backend   
+                    </fieldset>
+                    
+                 </div>
+                 </section>
+            <section id ="contact">
+                <div class="section inner">
+                    <h3> Contact me </h3>
+                    <p> Also find me on:</p>
+                        <ul>
+                            <li><a href=""https://facebook.com/">Facebook</a></li>
+                            <li><a href=""https://linkedin.com/">Linkedin</a></li>
+                            <li><a href=""https://twitter.com/">Twitter</a></li>
+                        </ul>
+                    <p> Or, <a href="mailto:info@gateway.com"> Send an email</a></p>
+                </div>
+            </section>
+            
+        </main>
+        <footer align=center>
+            Copyright Gateway Software Solutions @2008
+
+        </footer>
+
+    </body>
+</html>

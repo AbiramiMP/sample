@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<HTML>
+<style>
+    .container{
+    display: grid;
+    width: 750px;
+    height: 600px;
+    grid-template-columns:200px 1fr 1 fr;
+    grid-template-rows: 80px 1fr 1fr 100px;
+    grid-gap: .5rem;
+}
+.orange{
+    background: orange;
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+.blue{
+    background-color: blue;
+    grid-row:2/3;
+    grid-column: 1/3;
+}
+.red{
+    background-color: red;
+    grid-row:1/3;
+    grid-column: 2/4;
+}
+.green{
+    background-color: green;
+    grid-row:1/3;
+    grid-column:3/4;
+}
+</STYLE>
+<div class="container" >
+    <div class="orange"><button type="button"  > Orange </button></div>
+    <div class="blue"><button type="button" > Blue </button></div>
+    <div class="red"><button type="button" > Red</button></div>
+    <div class="green"><button type="button" >Green </button></div>
+</div>
+</HTML>

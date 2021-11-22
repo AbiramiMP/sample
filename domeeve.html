@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> DOM examples</title>
+        </head>
+        <body>
+          
+                Name:<input type="text" id="uname">
+                <button type="button" id="btn" > Click </button>
+            <script>
+                let text=document.querySelector('#uname');
+                text.onblur=function(){
+                    alert(document.querySelector('#uname').value);
+                };
+            </script>
+            <button id="b1">Click me</button>
+            <p> No handler here</p>
+            <script>
+                let button=document.querySelector("#b1");
+                button.addEventListener("click",()=>{
+               alert("Hi")
+                });
+            </script>
+            </body>
+            </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> DOM examples</title>
+        </head>
+        <body>
+            <form>
+                <div>
+                    <label for="ename">Employee name:</label>
+                    <input id="ename" type="text">
+                </div>
+                <div>
+                    <label for="dname">Department name:</label>
+                    <input id="dname" type="text">
+                </div>
+                <div>
+                    <input id="submit" type="submit">
+                </div>
+            </form>
+            <p></p>
+            <script>
+                const form =document.querySelector('form');
+                const ename=document.getElementById('ename');
+                const dname=document.getElementById('dname');
+                const para =document.querySelector('p');
+                para.style.color='orange';
+                form.addEventListener("submit",(e)=>{
+                    if(ename.value===''||dname.value===''){
+                        e.preventDefault();
+                        para.textContent='You need to fill  both!';
+                    }
+                });
+                
+
+                
+
+            </script>
+        </body>
+        </html>

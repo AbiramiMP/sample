@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Jquery examples </title>
+        <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    </head>
+
+    <style>
+        img{
+            color: rgb(253, 13, 161);
+            border-right-width: medium;
+        }
+        body
+        {
+            background-color:rgb(218, 235, 70);
+        }
+        p
+        {
+            color: red;
+            font-weight:bold;;
+            font-size: xx-large;
+        }
+      
+        button
+        {
+            color: darkorange;
+        }
+
+    </style>
+    <label <b>ANIMATIONS PART:1 </b></label>
+    <script>
+        
+        $(document).ready(function () {
+            $("label").mouseover(function () {
+                $("img").animate({ bottom :'50px'});
+            });
+        });
+       
+        $(document).ready(function () {
+            $("label").mouseover(function () {
+                $("img").animate({ right :'50px'});
+            });
+        });
+        
+        $(document).ready(function () {
+            $("label").mouseover(function () {
+                $("img").animate({ top :'50px'});
+            });
+        });
+        
+      
+     
+
+        $(document).ready(function () {
+            $("label").mouseout(function () {
+                $("img").animate({ left :'50px'});
+            });
+        });
+
+        $(document).ready(function(){
+        $("p:last").css("background-color", "green");
+        });
+
+        $(document).ready(function(){
+            $("*").css("background-color", "yellow green");
+            });
+        
+
+        $(document).ready(function(){
+        $("p:hidden").show(6000);
+        });
+
+        $(document).ready(function(){
+        $("button").click(function(){
+            $("a[target='_self']").hide();
+        });
+        });
+        
+        $(function(){
+            $("mymarquee").mousemove(function(){
+            $("#mymarquee").stop();
+        });
+    });
+    </script>
+
+<body>
+   
+    <img src="images/dog.jpg" style="position: fixed; width: 100px;height: 100px;border:5px double red;">
+    </img> 
+    
+    <img src="images/music.jpg" style="position: fixed; width: 100px;height: 100px;border:5px double rgb(0, 255, 136);">
+    </img>
+
+    <div class="div"
+
+    <marquee behavior="scroll" direction="left" id="mymarquee">
+        <p> WELCOME TO MY PAGE </p>
+        </marquee>
+        <br><br><br><br><br><br>
+        <input type="button" value="Stop Marquee" onclick="document.getElementById('mymarquee').stop;"><br><br>
+        <input type="button" value="Start Marquee" onclick="document.getElementById('mymarquee').start;">
+    
+    <p style="display:none;">Welcome to animated page...</p>
+    <p><a href="https://www.instagram.com/html/" target="_self">Instagram</a></p>
+
+    <p><a href="https://www.facebook.com/css/">Facebook</a></p>
+
+    <button>Click me</button>
+</body>
+</html>

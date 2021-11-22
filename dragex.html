@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>  
+    <title>My jquery examples</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <style>  
+  #draggable { width: 280px; height: 300px; padding: 0.5em; background:#ecff7f;}  
+  </style>  
+  <script>  
+  $(function(){
+      $('#uname').blur(function(){
+         let value=$("#uname").val();
+         if(value===''){
+             $("#unameerr").text("Enter Username").css("color","red");
+             $("#unameerr").text("Enter Username").css("font-weight","bold");
+             $("#uname").focus();
+
+            
+         } 
+         else{
+              $("#sname").val(value);
+              $("#unameerr").text("");
+         }
+        })
+  });
+  $(function() {  
+    $( "#draggable" ).draggable();  
+  });  
+  $(function() {  
+    $('form' ).draggable();  
+  });  
+ $(function(){
+     $("button").click(function(){
+         alert("Submitted");
+     })
+ });
+
+ 
+  </script>  
+</head>  
+<body>  
+    <div id="draggable" >  
+            <form style="border: 2px solid rgb(209, 24, 24);width:200px;">
+                <label>Enter Username:</label>
+                <input id="uname" type="text">
+                <label id= "unameerr"></label><br>
+                <label>Entered Username:</label>
+                <input id="sname" type="text">
+                
+                
+
+            <p>Choose Department</p>  
+             <input type="radio" name="Department" value="EEE"> EEE
+            <input type="radio" name="Department" value="ECE">ECE
+            <input type="radio" name="Department" value="CSE">CSE
+            <br><br>
+            <p>Choose Course</p>  
+            
+      
+        <input type="checkbox" name="Course" value="C">C
+        <input type="checkbox" name="Course" value="Java">Java
+        <input type="checkbox" name="Course" value="HTML">HTML
+        <br><br>
+        <button  type="button" name="all">Submit</button>   
+      </div>
+    
+    </div>
+  
+</form>
+<img src="D:\web examples\images\pink.jpg" width="750" height="500">
+    
+</body>  
+</html>  

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <title>My BootStrap Example</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<link rel="Stylesheet" type="text/css" href="css/portfolio.css"/>
+
+    <title>Personal Info</title>
+    <script>
+      $(function() {  
+        $( "#draggable" ).draggable();  
+      }); 
+     
+    </script>
+   
+</head>
+<style>
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(196, 177, 177);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(180, 218, 248);
+}
+
+.active {
+  background-color: #f8a8c0;
+}
+  
+    #home {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/blank.png');
+}
+#about {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), ur('images/blank.png');
+    font-size: large;
+    font-weight:bold;
+}
+
+#education {
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/blank.png');
+    font-size: large;
+    font-weight:bold;
+}
+#skills{
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/blank.png');
+    font-size: large;
+    font-weight:bold;
+}
+#contact{
+  background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('images/blank.pngg');
+    font-size: large;
+    font-weight:bold;
+}  
+div.a {
+  font-size: 15px;
+}
+div.c{
+    font-size: large;
+}
+h4{
+    font-size: x-large;
+    font-weight: 600;
+}
+h2{
+  font-size: x-large;
+  font-style: oblique;
+  color: brown;
+   text-align: center;
+}
+
+   
+</style>
+
+    </head>
+   
+    <body>
+      <div class="container">
+        <div class="a">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <img src="images/AM.jpg"  height="30" width="80">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><strong>About Me</strong></a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>Education</strong>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http://www.smvm2012.com/">SSLC</a>
+                           
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://smbcbseschool.com/">HSC</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="http://www.psnacet.edu.in/">UG</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://www.alliance-2022.com/">Work</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills"><strong>Skills</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#contact">Contact</a>
+                    </li>
+                </ul>
+               
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button type="button"class="btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter">Form</button>
+                        <div class="modal fade"id="exampleModalCenter"tableindex="-1"role="dialog"aria-labelledby="exampleModalCenterTitle">
+                        <div class="modal-dialog modal-dialog-centered"role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"id="exampleModalLongTitle"></h5>
+                                <div class="modal-body">
+                                
+                                  <form class="signup-form" action="" method="">
+                                    <div class="form-header">
+                                      <h1><center>Registration Form</center> </h1>
+                                    </div>
+                                    <div class="form-body">
+                                      <div class="horizontal-group">
+                                        <div class="input-group">
+                                        <div class="form-group left">
+                                          <label for="firstname" class="label-title">First name *</label>
+                                          <input type="text" id="firstname" class="form-input" placeholder="Enter your first name" required="required" />
+                                        </div>
+                                        <div class="form-group right">
+                                          <label for="lastname" class="label-title">Last name</label>
+                                          <input type="text" id="lastname" class="form-input" placeholder="Enter your last name" />
+                                        </div>
+                                        </div>
+                                        </div>
+                                      
+                                      <div class="form-group">
+                                        <label for="email" class="label-title">Email*</label>
+                                        <input type="email" id="email" class="form-input" placeholder="Enter your email"  required="required" >
+                                        
+                                      <div class="horizontal-group">
+                                        <br>
+                                        <div class="form-group left">
+                                          <label for="password" class="label-title">Password *</label>
+                                          <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+                                        </div>
+                                        
+                                        <div class="horizontal-group">
+                                          <div class="form-group right">
+                                            <label for="password" class="label-title">Confirm Password *</label>
+                                            <input type="password" id="password" min="8" max="12" class="form-input" placeholder="Enter your password" required="required">
+                                          </div>
+                                        
+                                        <div class="form-group right">
+                                          <br>
+                                          <label for="Phone Number" class="label-title">Alternate Number *</label>
+                                          <input type="t" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+                                        </div>
+                                      </div>
+                                      <div class="form-group left">
+                                        <label for="Phone Number" class="label-title">Phone Number *</label>
+                                        <input type="t" id="Phone Number" name="Phone Number" class="form-input" palceholder="PhoneNumber" pattern="[7-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9"  required="required">
+                                      </div>
+                                    
+                                      
+                                     <!---- <div class="horizontal-group">
+                                        
+                                          <label class="label-title">Gender:</label>
+                                          
+                                            <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+                                            <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+                                            <label for="others"><input type="radio" name="gender" value="others" id="others"> Others</label>
+                                          </div>
+                                          
+                                        <br>
+                                        <div class="horizontal-group ">
+                                          <div class="form-group left">
+                                          <label for="experience" class="label-title">DOB</label>
+                                          <input type="date"  value="date"class="form-input">
+                                        </div>
+                                        <div class="form-group right">
+                                          <label  class="label-title">Age</label>
+                                          <input type="number" min="18" max="30"  value="18" class="form-input">
+                                        </div>
+                                      </div>
+                                     <!----- <div class="horizontal-group">
+                                        
+                                        <label class="label-title">Education Level</label>
+                                        <select class="form-input" id="level" >
+                                          <option value="ug">UG</option>
+                                          <option value="pg">PG</option>
+                                          <option value="others">Other</option>
+                                        </select>
+                                      </div>
+                                     
+                                        <br>
+                                        <div class="horizontal-group">
+                                        <div class="form-group left" >
+                                          <label for="choose-file" class="label-title">Upload Photo</label>
+                                          <input type="file" id="choose-file" size="80">
+                                        </div>
+                                          <div class="form-group right" >
+                                            <label for="choose-file" class="label-title">Upload CV</label>
+                                            <input type="file" id="choose-file" size="80">
+                                          </div>
+                                       
+                                          <div class="form-group ">
+                                            <label class="label-title">Languages Known</label>
+                                            <div >
+                                             
+                                              <label><input type="checkbox" value="C">C</label>
+                                              <label><input type="checkbox" value="Java">Java</label>
+                                              <label><input type="checkbox" value="HTML">HTML</label>
+                                              <label><input type="checkbox" value="Python">Python</label>
+                                              <label><inpu</label>
+                                            </div>
+                                          </div>
+                                        </div>--->
+                                       
+                  
+                                      
+                                       
+                                 <!---- <div class="form-group">
+                                      <label for="firstname" class="label-title">Address*</label><br>
+                                   <br> 
+                                   <div class="horizontal-group">
+                                    <div class="form-group left">
+                                  <label  class="label-title" for="primary address">Current Address:</label>
+                                  <input type="text" class="form-input"  name="Address" id="primaryaddress" required /> <br>
+                                  </div>
+                                  <div class="form-group right">
+                                  <label  class="label-title" for="primary zip">Zip code:</label>
+                                  <input type="text" class="form-input"  name="Zip code" id="primaryzip" pattern="[0-9]{6}" required /> <br />
+                              </div>
+                              </div>
+                                  <br>
+                                  <input type="checkbox" name="same" id="same" onchange="addressSame()" /> 
+                                  
+                                  <label for="same">Check this box permanent address same as current address.</label>
+                                  
+                                  
+                                  <div class="horizontal-group">
+                                    <div class="form-group left">
+                                      <br>
+                                  <label  class="label-title" for="secondary address">Permanent Address:</label>
+                                  <input type="text" class="form-input"  name="Address" id="secondaryaddress" required /> <br>
+                                  </div>
+                                  <div class="form-group right">
+                                    <br>
+                                  <label  class="label-title" for="secondary zip">Zip code:</label>
+                                  <input type="text" class="form-input"  name="Zip code" id="secondaryzip" pattern="[0-9]{6}" required /> <br />
+                              </div>
+                              </div>
+                            <!----- <div class="form-group ">
+                                <label for="choose-file" class="label-title">Bio</label>
+                                <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+                              </div>
+                            </div> --->
+
+                            <br>
+                            <br>
+                            <div class="form-footer">
+                              
+                              <span>Fields marked * are mandatory</span>
+                              <button type="submit"  class="btn">Register</button>
+                              </div>
+                              </div>
+                    
+                  
+                                <button type="button"class="close"data-dismiss="modal"aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </form>
+                                </div>
+                                </div>
+                                </div>
+                              </a>
+                            </div>
+                </div>
+                </nav>
+                </div>
+                </div>
+                 
+    <section  id="home">
+     
+      <div id="draggable">
+    <img src="images/port.jpg"  width="300" height="200"></div>
+        <h2>Hi I'm Abirami Madhavan :)</h2>     
+</section>
+<section  id="about">
+  <h2>About me</h2>
+  <center> <img src="D:\web examples\images\pp.jpg" width="200" height="200"></center>
+  <p> Hi, This is Abirami from Dindigul.
+  I am working in Renault Nissan Technology & Business Center in India in the position of Graduate Engineer Trainee.
+          I am intrested in plantations,cooking. My dream is to explore new places. 
+               My strength is I am self motivated and hard working person.
+
+          </p>
+          <div class="panel-group" id="accordtion">
+            <div class="panel panel-info">
+                <div class="heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="accordtion" href="#collapsexample">My Hobbies</a>
+                        </h4>
+                    
+                </div>
+                <div id="collapsexample" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <table class="table">
+                <td>Listening Music</td>
+                <td>Watching Movies</td>
+                <td> Solving Rubiks Cube</td>
+                <td> Long Drives</td>
+          
+    
+    </table>
+    </div>     
+</section>
+
+      <section id="education">
+        <h2 >Educational Details </h2>
+        <div class="row">
+          <div class="col-2">
+              <div class="card">
+                <p>SSLC</p>
+                  <img class="card-img" src="images/SMVM.jpg" alt="SMVM">
+                  <div class="card-img-overlay overlay-grey text-white d-flex justify-content-start align-items-end">
+                  </div>
+              </div>
+          </div>
+      <div class="col-2">
+          <div class="card">
+            <p>HSC</p>
+              <img class="card-img" src="images/smb.jpg" alt="smb">
+              <div class="card-img-overlay overlay-green text-red d-flex justify-content-start align-items-end">
+
+              </div>
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="card">
+            <p>UG</p>
+              <img class="card-img" src="images/psna.jpg" alt="psna">
+              <div class="card-img-overlay overlay-grey text-blue  d-flex justify-content-start align-items-end">
+                  </div>
+                  </div>
+                  </div>
+                  <div class="col-2">
+                      <div class="card">
+                        <p>Work</p>
+                          <img class="card-img" src="images/Rntbci.jpg" alt="rntbci">
+                          <div class="card-img-overlay overlay-grey text-blue  d-flex justify-content-start align-items-end">
+                          </div>
+          </div>
+      </div>
+</div>
+<br>
+<br>
+  
+       
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>School/College Name</th>
+              <th>Class</th>
+              <th>Year of Passing</th>
+            </tr>
+          </thead>
+          <tbody>   
+            <tr class="success">
+              <td>SSLC</td>
+              <td>SMVM</td>
+              <td>First</td>
+              <td>2015</td>
+            </tr>
+            <tr class="danger">
+              <td>HSC</td>
+              <td>SMBM</td>
+              <td>First</td>
+              <td>2017</td>
+            </tr>
+            <tr class="active">
+              <td>UG</td>
+              <td>PSNACET</td>
+              <td>First</td>
+              <td>2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+  
+          </section>
+          <section" id="skills">
+
+            <h2 >My Skills</h2>
+           
+            <label for="name"><strong> Programming Skills</strong></label>
+            <dt >
+               <dl> C</dl>         
+              <dl> HTML</dl>
+            <dl>JAVA</dl>  
+          </dt>
+          <label for="name"><strong> Technical  Skills</strong></label>
+          <dt >
+             <dl>IOT</dl>         
+            <dl>Artificial Intelligence</dl>
+          <dl>Networking</dl>  
+          </dt>
+
+ 
+  
+            </section>
+          
+            <section  id ="contact">
+              <div class="section inner">
+                 <h2> Find me on </h2>
+                  
+                      
+                 <ul>
+                  <li><a href=""https://facebook.com/">Facebook</a></li>
+                  <li><a href=""https://linkedin.com/">Linkedin</a></li>
+                  <li><a href=""https://twitter.com/">Twitter</a></li>
+              </ul>
+                      <p> Mail: <a href="abirami17@gmail.com">abirami17@gmail.com</a></p>
+
+           
+        
+        </div>
+</section>
+<footer align="center">
+  <h6>Copyrights@2021</h6>
+</footer>
+
+
+</body></html>

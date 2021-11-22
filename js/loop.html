@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            My Javascript examples
+        </title>
+    </head>
+    <body>
+        <table border=1>
+            <script>
+            const student=["Abirami",21,"Female","abirami17@gmail.com",987654321];
+                for(let i=0; i<student.length;i++)
+            {
+                document.write("Names are:" + student +"<br>");
+            } 
+            for(let stud in student)
+            {
+                document.write("<tr><td>" +stud+" </td><td>" +student[stud]+ "</td><tr>");
+            }
+            for(let stud in student){
+                document.write("<tr><td>" +stud+" </td><tr>" );
+                }
+            let stud=0;
+            for(;student[stud];){
+                document.write("<tr><td>" +student[stud]+" </td><tr>" );
+                    stud++;
+
+            }
+          
+          
+
+
+            </script>
+        </table>
+</body>
+</html>

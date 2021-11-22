@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> DOM examples</title>
+        <script type="text/javascript">
+            function addChildElement(){
+                const sect= document.querySelector('section');
+                const div=document.createElement('div');
+                div.textContent="Hi ";
+                sect.appendChild(div);
+                div.style.color='red'  
+                const text=document.createTextNode('My Div TXT');
+                const ndiv=document.querySelector('div');
+                ndiv.style.color='blue'
+                ndiv.appendChild(text);
+            }
+            function deleteChildElement(){
+                const sect= document.querySelector('section');
+                const div=document.querySelector('div');
+              
+                sect.removeChild(div);
+
+            }
+            function addBorder(){
+                const img=document.querySelector('img');
+                img.style.border="5px solid red"
+            }
+            function removeBorder(){
+                const img=document.querySelector('img');
+                img.style.border=""
+            }
+        </script>
+        
+        </head>
+        <body>
+            <section>
+                <img src="images/dog.jpg" alt="dog" width="200" height="300" 
+                onmouseover="addBorder()" onmouseleave="removeBorder()">
+                <p> Here we will add a link to the <a href ="https://www.google.com/"> Google Loading Page</a></p>
+
+            </section>
+            <script type="text/javascript" src="js/domex.js">
+                const img = document.querySelector('img');
+                console.log(img.ELEMENT_NODE)
+                img.src= "D:\web examples\images\music.jpg"
+                const a=document.querySelector('a');
+                a.href ="http://www.yahoo.com"
+                
+            </script>
+            <button type="button" onclick="addChildElement()" >Add Element</button>
+            <button type="button" onclick="deleteChildElement()" >Delete Element</button>
+        
+        </body>
+        </html>

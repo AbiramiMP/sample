@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> DOM examples</title>
+        </head>
+        <script type="text/javascript">
+            function getsq()
+            {
+                var no= document.getElementById("num").value ;
+                alert("Your age is" +(2021-no));
+
+            }
+            function display()
+            {
+                var disp= document.getElementsByName("number") ;
+                alert("Entered Year" +disp[0].value);
+
+            }
+            function countpara()
+            {
+                var totalpara= document.querySelectorAll("p") ;
+                alert("Total no.of lines in the para" +totalpara.length);
+
+
+            }
+        </script>
+        <body>
+            <form>
+                Enter the year you were born:<input type="number" id="num" name="number" /> <br/> <br/>
+                <input type="button" value="Display year" onclick="display()" /> <br/>
+                <input type="button" value="Calculate Age" onclick="getsq()" /> <br/>
+            </form>
+            <p>What is DOM</p>
+            <p>It is an API</p>
+            <p>that can be used with any programming languages like JS</p>
+            <p>to represent the webpage in a tree structure</p>
+            <p> so that the program can access ,read,change a document's structure,style or content</p>
+            <button onclick="countpara()">Count no.of lines</button>
+        </body>
+        </html>

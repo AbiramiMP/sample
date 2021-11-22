@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS selectors</title>
+
+    <style>
+        body {
+            background-color: darkkhaki;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            width: 700px;
+            padding: 20px 10px;
+            margin: 0 auto;
+            background-color: snow;
+            border: 1px dotted black;
+        }
+
+        .intro {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            color: rgb(243, 124, 20);
+            text-align: center;
+        }
+
+        #my-Address {
+            color: rebeccapurple;
+        }
+
+        ul{
+            list-style-type: square;
+        }
+
+        ul:first-of-type >li {
+            color: darkslateblue;
+        }
+
+        .myquote {
+            float:right;
+            font-size: 14px;
+            color: sienna;
+        }
+        #ListCandidates{
+            display: inline-block;
+            float:none;
+            background-color: inherit;
+        }
+
+        .myquote~p {
+            color: rgb(248, 15, 248);
+        }
+        .clearfix::after{
+            content:" ";
+            display:block;
+            clear:both;
+        }
+
+        table,
+        td,
+        tr,form {
+            margin: 0 auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-decoration: underline;
+            color: blueviolet;
+        }
+
+        td {
+            color: cornflowerblue;
+        }
+
+        td:nth-child(2) {
+            color: darkturquoise;
+        }
+        form{
+            width:300px;
+            padding:20px 10px;
+            margin-top:20px;
+            color:rgb(73, 72, 72);
+        }
+        .noSel:nth-child(1){
+            color:rgb(8, 8, 8);
+        }
+        h4:nth-child(1){
+            color:indianred;
+        }
+        h4:last-of-type{
+            color:hotpink;
+        }
+        ul:nth-last-of-type(2){
+            float:left;
+            background-color: indigo;
+
+        }
+        ul:nth-last-of-type(2) > li{
+            color:lawngreen;
+        }
+        ul:last-of-type{
+            float:right;
+            background-color: indigo;
+        }
+        ul:last-of-type > li{
+            color:lawngreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to My Homepage</h1>
+    <main class="container">
+        <div class="intro">
+            <p>My name is Sabarinathan <span id="Lastname">Muthu</span></p>
+            <p id="my-Address">I live in Coimbatore</p>
+            <p>I have many candidates:</p>
+        </div>
+        <ul id="ListCandidates">
+            <li>Anusha</li>
+            <li>Aravind</li>
+            <li>Nivetha</li>
+            <li>Vamsi</li>
+        </ul>
+        <div class="clearfix">
+        <p class="myquote">All my Candidates are freshers!<br>
+            But have good knowledge!!</p>
+        </div>
+        <p lang="it" style="clear:right;" title="Hello beautiful">Ilakiya.S</p>
+        <h3>We are all TeamMembers!</h3>
+
+        <p><b>My latest discoveries have led me to believe that we are all developers:</b></p>
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <th>Name</th>
+                <th>Type of Developers</th>
+            </tr>
+            <tr>
+                <td>UI</td>
+                <td>DB</td>
+            </tr>
+            <tr>
+                <td>Algorithm</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>App</td>
+                <td>Program</td>
+            </tr>
+            <tr>
+                <td>Query</td>
+                <td>Test</td>
+            </tr>
+        </table>
+
+        <div>
+            <form class="clearfix">
+                <h4>Subscribe to Our Channel:</h4>
+                <div>
+                    <div>Name:</div>
+                    <div><input type="text" class="markup" /></div>
+                </div>
+                <div>
+                    <div>E-mail:</div>
+                    <div><input type="email" class="markup" /></div>
+                </div>
+
+                <div class="noSel">
+                    Female: <input name="rr" type="radio" id="rr1" checked="checked" />
+                    Male: <input name="rr" type="radio" id="rr2" />
+                    Other: <input name="rr" type="radio" id="rr3" disabled="disabled" />
+                </div>
+                <h4>News categories:</h4>
+                <div>
+                    <div>Analyst:</div>
+                    <div><input id="cc1" type="checkbox" checked="checked" /></div>
+                </div>
+                <div>
+                    <div>Designer:</div>
+                    <div><input id="cc2" type="checkbox" /></div>
+                </div>
+                <div>
+                    <div>Tester:</div>
+                    <div><input id="cc3" type="checkbox" /></div>
+                </div>
+                <div class="noSel" style="clear:both;"></div>
+                <p class="noSel">Your Serial number (between 1 and 10): <input type="number" min="5" max="10"
+                        value=20 /></p>
+            </form>
+        </div>
+
+        <div class="clearfix">
+        <ul >
+            <li>!st element</li>
+        </ul>
+
+        <ul >
+            <li>2nd element</li>
+        </ul>
+    </div>
+
+
+
+    </main>
+
+</body>
+
+</html>
